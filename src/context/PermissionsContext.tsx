@@ -7,6 +7,7 @@ import {
   request,
   openSettings,
 } from 'react-native-permissions';
+import SplashScreen from 'react-native-splash-screen';
 
 export interface PermissionsState {
   locationStatus: PermissionStatus;
@@ -65,6 +66,10 @@ export const PermissionsProvider = ({
       if (state !== 'active') return;
       checkLocationPermission();
     });
+  }, []);
+
+  useEffect(() => {
+    SplashScreen.hide();
   }, []);
 
   return (

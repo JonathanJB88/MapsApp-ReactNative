@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { PermissionsContext } from '../context/PermissionsContext';
+import { PermissionsContext } from '../context';
 import { Maps, Permissions, Loading } from '../screens';
 
 const Stack = createStackNavigator();
